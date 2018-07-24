@@ -855,7 +855,7 @@ JSQMessagesKeyboardControllerDelegate>
     JSQMessagesCollectionViewCell *selectedCell = (JSQMessagesCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:self.selectedIndexPathForMenu];
     CGRect selectedCellMessageBubbleFrame = [selectedCell convertRect:selectedCell.messageBubbleContainerView.frame toView:self.view];
 
-    [menu setTargetRect:selectedCellMessageBubbleFrame inView:self.view];
+    [menu setTargetRect:selectedCellMessageBubbleFrame inView:selectedCell];
     [menu setMenuVisible:YES animated:YES];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
